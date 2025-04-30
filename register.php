@@ -29,7 +29,7 @@
             }
         }
     }else{
-        echo '<script>alert("Error Occured");</script>"';
+        echo '<script>alert("Error Occured, Please try again");</script>"';
     }
     
     $conn->close();
