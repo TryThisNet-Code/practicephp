@@ -13,20 +13,15 @@
             $sql = "INSERT INTO student_tbl(name, email, pass) 
                     VALUES ('$username','$email','$hashpass')";
     
-            // try{
-            //     $conn->query($sql);
-            //     echo '<script>alert("Registration Successful"); window.location="index.php";</script>';
-            // }catch(mysqli_sql_exception $e){
-            //     if($e->getCode() == 1062){
-            //         echo '<script>alert("Error Occurred: ' . $e->getMessage() . '"); window.location.href = "registerpage.php";</script>';
-            //     }
-            // }
-
-            if($conn->query($sql) === TRUE){
+            try{
+                $conn->query($sql);
                 echo '<script>alert("Registration Successful"); window.location="index.php";</script>';
-            }else{
-                echo '<script>alert("Error Occurred: ' . $e->getMessage() . '"); window.location.href = "registerpage.php";</script>';
+            }catch(mysqli_sql_exception $e){
+                if($e->getCode() == 1062){
+                    echo '<script>alert("Error Occurred: ' . $e->getMessage() . '"); window.location.href = "registerpage.php";</script>';
+                }
             }
+
         }
     }else{
         echo '<script>alert("Error Occured, Please try again");</script>"';
