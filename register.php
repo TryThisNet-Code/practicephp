@@ -8,10 +8,10 @@
     if(isset($_POST["subBtn"])){
         if($username && $email && $password){
             
-            // $hashpass = password_hash($password, PASSWORD_DEFAULT);
+            $hashpass = password_hash($password, PASSWORD_DEFAULT);
         
             $sql = "INSERT INTO student_tbl(name, email, pass) 
-                    VALUES ('$username','$email','$password')";
+                    VALUES ('$username','$email','$hashpass')";
     
             // try{
             //     $conn->query($sql);
