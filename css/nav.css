@@ -1,0 +1,76 @@
+/* General navbar styling */
+.navbar {
+    display: flex;
+    flex-direction: column;
+    background-color: #343a40;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+/* Header area styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #23272b;
+}
+
+/* Navbar brand title */
+.navbar-brand {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Navbar toggle button */
+.navbar-toggle {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.navbar-toggle .icon-bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+}
+
+/* Screen reader only text */
+.sr-only {
+    position: absolute;
+    left: -9999px;
+}
+
+/* Sidebar styling */
+.sidebar {
+    background-color: #495057;
+    padding: 10px 20px;
+}
+
+.sidebar-container {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-container li {
+    margin: 10px 0;
+}
+
+.sidebar-container a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.sidebar-container a:hover {
+    background-color: #6c757d;
+}

@@ -1,0 +1,51 @@
+.main-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 220px;
+    background-color: #495057;
+    padding: 20px;
+    color: white;
+}
+
+.sidebar-container {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-container li {
+    margin: 10px 0;
+}
+
+.sidebar-container a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.sidebar-container a:hover {
+    background-color: #6c757d;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
