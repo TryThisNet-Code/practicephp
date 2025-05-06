@@ -48,22 +48,13 @@
                                 $sql = "SELECT * FROM student_tbl";
                                 $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
-                                // while($row = mysqli_fetch_assoc($result)){
-                                //     echo '<tr>';
-                                //     echo '<td>' . $row['student_id'] . '</td>';
-                                //     echo '<td>' . $row['name'] . '</td>';
-                                //     echo '<td>' . $row['email'] . '</td>';
-                                //     echo '<td>' . $row['pass'] . '</td>';
-                                //     echo '<td>' . $row['date'] . '</td>';
-                                //     echo '</tr>';
-                                // }
                                 while($row = mysqli_fetch_assoc($result)){
                                     echo '<tr>';
-                                    echo '<td>'. $row['student_id'] . '</td>';
-                                    echo '<td>'. $row['name'] . '</td>';
-                                    echo '<td>'. $row['email'] . '</td>';
-                                    echo '<td>'. $row['pass'] . '</td>';
-                                    echo '<td>'. $row['date'] . '</td>';
+                                    echo '<td>'. htmlspecialchars($row['student_id']) . '</td>';
+                                    echo '<td>'. htmlspecialchars($row['name']) . '</td>';
+                                    echo '<td>'. htmlspecialchars($row['email']) . '</td>';
+                                    echo '<td>'. htmlspecialchars($row['pass']) . '</td>';
+                                    echo '<td>'. htmlspecialchars($row['date']) . '</td>';
                                     echo '</tr>';
                                 }
                             ?>
